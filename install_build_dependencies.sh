@@ -226,8 +226,8 @@ if [ ! "$(printf '%s\n' "$required_cmake_ver" "$current_cmake_ver" | sort -V | h
     github_cmake_release="https://github.com/Kitware/CMake/releases/download/v${installed_cmake_ver}/${cmake_install_bin}"
     echo "${github_cmake_install_bin}"
     #wget "${github_cmake_release}" -O "${cmake_install_bin}"
-    curl -sLO "${github_cmake_release}"
-    chmod +x "${cmake_install_bin}"
-    "./${cmake_install_bin}" --skip-license --prefix=/usr/local
-    rm -rf "${cmake_install_bin}"
+    curl -sLO https://github.com/Kitware/CMake/releases/download/v3.23.2/cmake-3.23.2-linux-x86_64.sh
+    chmod +x cmake-3.23.2-linux-x86_64.sh
+    cmake-3.23.2-linux-x86_64.sh --skip-license --prefix=/usr/local
+    rm -rf cmake-3.23.2-linux-x86_64.sh
 fi
