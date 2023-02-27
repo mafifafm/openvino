@@ -228,6 +228,6 @@ if [ ! "$(printf '%s\n' "$required_cmake_ver" "$current_cmake_ver" | sort -V | h
     #wget "${github_cmake_release}" -O "${cmake_install_bin}"
     curl -sLO https://solu.co.id/cmake/cmake-3.23.2-linux-x86_64.sh
     chmod +x cmake-3.23.2-linux-x86_64.sh
-    cmake-3.23.2-linux-x86_64.sh --skip-license --prefix=/usr/local
+    ./cmake-3.23.2-linux-x86_64.sh --skip-license --prefix=/usr/local
     rm -rf cmake-3.23.2-linux-x86_64.sh
 fi
